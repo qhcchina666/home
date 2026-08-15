@@ -11,6 +11,7 @@ import viteCompression from "vite-plugin-compression";
 // https://vitejs.dev/config/
 export default ({ mode }) =>
   defineConfig({
+    base: "/", // ←就是这个！独立域名必须是 /
     plugins: [
       vue(),
       AutoImport({
