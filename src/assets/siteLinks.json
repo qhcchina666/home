@@ -1,42 +1,42 @@
 [
   {
-    "icon": "ri-tv-line",
-    "title": "影视",
-    "url": "https://tv.qhc.cc.cd/"
+    "icon": "Link",
+    "name": "影视",
+    "link": "https://tv.qhc.cc.cd/"
   },
   {
-    "icon": "ri-mail-line",
-    "title": "邮箱",
-    "url": "https://mail.qhc.dpdns.org/"
+    "icon": "Link",
+    "name": "邮箱",
+    "link": "https://mail.qhc.dpdns.org/"
   },
   {
-    "icon": "ri-disc-line",
-    "title": "音乐",
-    "url": "https://music.qhc.cc.cd/"
+    "icon": "CompactDisc",
+    "name": "音乐",
+    "link": "https://music.qhc.cc.cd/"
   },
   {
-    "icon": "ri-compass-line",
-    "title": "起始页",
-    "url": "https://home.qhc.cc.cd/"
+    "icon": "Compass",
+    "name": "起始页",
+    "link": "https://home.qhc.cc.cd/"
   },
   {
-    "icon": "ri-book-open-line",
-    "title": "导航页",
-    "url": "https://map.qhcgpt.cc.cd/"
+    "icon": "Book",
+    "name": "导航页",
+    "link": "https://map.qhcgpt.cc.cd/"
   },
   {
-    "icon": "ri-gamepad-line",
-    "title": "五子棋",
-    "url": "https://wuziqi.qhc.cc.cd/"
+    "icon": "Link",
+    "name": "五子棋",
+    "link": "https://wuziqi.qhc.cc.cd/"
   },
   {
-    "icon": "ri-shogi-line",
-    "title": "中国象棋",
-    "url": "https://gochess.qhc.cc.cd/"
+    "icon": "Link",
+    "name": "中国象棋",
+    "link": "https://gochess.qhc.cc.cd/"
   },
   {
-    "icon": "ri-chat-3-line",
-    "title": "多人聊天",
-    "url": "https://sayhi.qhc-chat.cc.cd/"
+    "icon": "Link",
+    "name": "多人聊天",
+    "link": "https://sayhi.qhc-chat.cc.cd/"
   }
 ]
