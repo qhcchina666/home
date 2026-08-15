@@ -1,37 +1,42 @@
 [
   {
-    "icon": "Blog",
-    "name": "博客",
-    "link": "https://blog.imsyy.top/"
+    "icon": "TV",
+    "name": "影视",
+    "link": "https://tv.qhc.cc.cd/"
   },
   {
-    "icon": "Cloud",
-    "name": "网盘",
-    "link": "https://pan.imsyy.top/"
+    "icon": "Mail",
+    "name": "邮箱",
+    "link": "https://mail.qhc.dpdns.org/"
   },
   {
     "icon": "CompactDisc",
     "name": "音乐",
-    "link": "https://music.imsyy.top/"
+    "link": "https://music.qhc.cc.cd/"
   },
   {
     "icon": "Compass",
     "name": "起始页",
-    "link": "https://nav.imsyy.top/"
+    "link": "https://home.qhc.cc.cd/"
   },
   {
     "icon": "Book",
-    "name": "网址集",
-    "link": "https://web.imsyy.top/"
+    "name": "导航页",
+    "link": "https://map.qhcgpt.cc.cd/"
   },
   {
-    "icon": "Fire",
-    "name": "今日热榜",
-    "link": "https://hot.imsyy.top/"
+    "icon": "Wuziqi",
+    "name": "五子棋",
+    "link": "https://wuziqi.qhc.cc.cd/"
   },
   {
-    "icon": "LaptopCode",
-    "name": "站点监测",
-    "link": "https://status.imsyy.top/"
+    "icon": "Chess",
+    "name": "中国象棋",
+    "link": "https://gochess.qhc.cc.cd/"
+  }
+   {
+    "icon": "Chat",
+    "name": "多人聊天",
+    "link": "https://sayhi.qhc-chat.cc.cd/"
   }
 ]
