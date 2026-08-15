@@ -1,11 +1,11 @@
 [
   {
-    "icon": "Link",
+    "icon": "Blog",
     "name": "影视",
     "link": "https://tv.qhc.cc.cd/"
   },
   {
-    "icon": "Link",
+    "icon": "Cloud",
     "name": "邮箱",
     "link": "https://mail.qhc.dpdns.org/"
   },
@@ -25,17 +25,17 @@
     "link": "https://map.qhcgpt.cc.cd/"
   },
   {
-    "icon": "Link",
+    "icon": "Fire",
     "name": "五子棋",
     "link": "https://wuziqi.qhc.cc.cd/"
   },
   {
-    "icon": "Link",
+    "icon": "Fire",
     "name": "中国象棋",
     "link": "https://gochess.qhc.cc.cd/"
   },
   {
-    "icon": "Link",
+    "icon": "Fire",
     "name": "多人聊天",
     "link": "https://sayhi.qhc-chat.cc.cd/"
   }
