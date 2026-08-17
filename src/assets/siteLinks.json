@@ -1,4 +1,9 @@
 [
+   {
+    "icon": "Blog",
+    "name": "博客",
+    "link": "https://blog.qhc.cc.cd/"
+  },
   {
     "icon": "Blog",
     "name": "影视",
