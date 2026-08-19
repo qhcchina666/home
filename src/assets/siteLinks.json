@@ -41,6 +41,16 @@
   },
   {
     "icon": "Fire",
+    "name": "AI",
+    "link": "https://gpt.qhc.cc.cd/"
+  },
+  {
+    "icon": "Fire",
+    "name": "论坛",
+    "link": "https://bbs.qhc.cc.cd/"
+  },
+  {
+    "icon": "Fire",
     "name": "多人聊天",
     "link": "https://sayhi.qhc-chat.cc.cd/"
   }
