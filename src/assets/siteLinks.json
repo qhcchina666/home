@@ -27,7 +27,7 @@
   {
     "icon": "Book",
     "name": "导航页",
-    "link": "https://map.qhcgpt.cc.cd/"
+    "link": "https://map.qhc.cc.cd/"
   },
   {
     "icon": "Fire",
@@ -52,6 +52,6 @@
   {
     "icon": "Fire",
     "name": "多人聊天",
-    "link": "https://sayhi.qhc-chat.cc.cd/"
+    "link": "https://chat.qhc.cc.cd/"
   }
 ]
