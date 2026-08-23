@@ -15,13 +15,23 @@
     "link": "https://mail.qhc.dpdns.org/"
   },
   {
+    "icon": "Cloud",
+    "name": "网盘",
+    "link": "https://pan.qhc.cc.cd/"
+  },
+  {
+    "icon": "Cloud",
+    "name": "Paste",
+    "link": "https://paste.qhc.cc.cd/"
+  },
+  {
     "icon": "CompactDisc",
     "name": "音乐",
     "link": "https://music.qhc.cc.cd/"
   },
   {
     "icon": "Compass",
-    "name": "起始页",
+    "name": "主页",
     "link": "https://home.qhc.cc.cd/"
   },
   {
