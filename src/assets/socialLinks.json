@@ -21,7 +21,7 @@
     "name": "Email",
     "icon": "/images/icon/email.png",
     "tip": "来封 Email ~",
-    "url": "https://mail.qhc.dpdns.org/"
+    "url": "mailto:qhcchina666@outlook.com"
   },
   {
     "name": "Twitter",
@@ -32,7 +32,7 @@
   {
     "name": "WeChat",
     "icon": "/images/icon/telegram.png",
-    "tip": "你懂的 ~",
+    "tip": "微信号qhcchina666",
     "url": "qhcchina666"
   }
 ]
