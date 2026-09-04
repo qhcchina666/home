@@ -2,12 +2,22 @@
    {
     "icon": "Blog",
     "name": "博客",
+    "link": "https://blogy.qhc.cc.cd/"
+  },
+  {
+    "icon": "Blog",
+    "name": "博客2",
     "link": "https://blog.qhc.cc.cd/"
   },
   {
     "icon": "Blog",
     "name": "影视",
     "link": "https://tv.qhc.cc.cd/"
+  },
+  {
+    "icon": "Cloud",
+    "name": "图床",
+    "link": "https://imghub.qhc.cc.cd/"
   },
   {
     "icon": "Cloud",
