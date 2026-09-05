@@ -56,24 +56,54 @@ export const getHitokoto = async () => {
 };
 
 /**
- * 天气 - Open‑Meteo（修复跨域，无需密钥）洛阳固定坐标
+ * 天气 - Open-Meteo 无密钥支持跨域
  */
+// 获取洛阳天气（固定坐标，不用弹窗定位）
 export const getWeather = async () => {
-  // 洛阳经纬度，无需浏览器弹窗定位
   const lat = 34.62;
   const lon = 112.45;
   try {
-    const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true&timezone=auto`
-    const res = await fetch(url)
-    const json = await res.json()
-    // 转换成你主页原来可以渲染的格式
+    const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true&timezone=auto`;
+    const res = await fetch(url);
+    const json = await res.json();
+    const w = json.current_weather;
     return {
-      temp: json.current_weather.temperature,
-      wind: json.current_weather.windspeed,
-      code: json.current_weather.weathercode
-    }
+      temp: Math.round(w.temperature),   // 温度°C
+      wind: Math.round(w.windspeed),     // 风速 km/h
+      code: w.weathercode,               // 天气代码
+      time: w.time,
+    };
   } catch (err) {
-    console.error("天气获取失败：", err)
-    return null
+    console.error("天气获取失败：", err);
+    return null;
   }
-}
+};
+
+// 把天气代码转成中文描述
+export const weatherCodeToText = (code) => {
+  const map = {
+    0: "晴",
+    1: "大部晴朗",
+    2: "多云",
+    3: "阴",
+    45: "雾",
+    48: "雾凇",
+    51: "毛毛雨",
+    53: "毛毛雨",
+    55: "毛毛雨",
+    61: "小雨",
+    63: "中雨",
+    65: "大雨",
+    71: "小雪",
+    73: "中雪",
+    75: "大雪",
+    80: "阵雨",
+    81: "阵雨",
+    82: "强阵雨",
+    95: "雷阵雨",
+    96: "雷阵雨伴冰雹",
+    99: "雷阵雨伴强冰雹",
+  };
+  return map[code] || "未知";
+};
+
