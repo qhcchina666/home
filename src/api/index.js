@@ -56,30 +56,24 @@ export const getHitokoto = async () => {
 };
 
 /**
- * 天气【新版 Open‑Meteo 无密钥、支持跨域】
+ * 天气 - Open‑Meteo（修复跨域，无需密钥）洛阳固定坐标
  */
-// 获取浏览器定位得到经纬度
-export const getLocation = ()=>{
-  return new Promise((resolve,reject)=>{
-    if(!navigator.geolocation){
-      reject("浏览器不支持定位");
-      return;
-    }
-    navigator.geolocation.getCurrentPosition(
-      (pos)=>resolve({lat:pos.coords.latitude,lon:pos.coords.longitude}),
-      (err)=>reject(err.message)
-    )
-  })
-}
-
-// 根据经纬度获取天气
-export const getWeather = async(lat,lon)=>{
-  try{
+export const getWeather = async () => {
+  // 洛阳经纬度，无需浏览器弹窗定位
+  const lat = 34.62;
+  const lon = 112.45;
+  try {
     const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true&timezone=auto`
     const res = await fetch(url)
-    return await res.json()
-  }catch(err){
-    console.error("天气请求失败",err)
+    const json = await res.json()
+    // 转换成你主页原来可以渲染的格式
+    return {
+      temp: json.current_weather.temperature,
+      wind: json.current_weather.windspeed,
+      code: json.current_weather.weathercode
+    }
+  } catch (err) {
+    console.error("天气获取失败：", err)
     return null
   }
 }
