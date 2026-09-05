@@ -71,6 +71,26 @@
   },
   {
     "icon": "Fire",
+    "name": "计算器",
+    "link": "https://calc.qhc.cc.cd/"
+  },
+  {
+    "icon": "Fire",
+    "name": "地址生成器",
+    "link": "https://address.qhc.cc.cd/"
+  },
+  {
+    "icon": "Fire",
+    "name": "TTS转语音",
+    "link": "https://tts.qhc.cc.cd/"
+  },
+  {
+    "icon": "Fire",
+    "name": "AI文生图",
+    "link": "https://aiimg.qhc.cc.cd/"
+  },
+  {
+    "icon": "Fire",
     "name": "多人聊天",
     "link": "https://chat.qhc.cc.cd/"
   }
