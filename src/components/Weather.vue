@@ -16,79 +16,38 @@
     <span>天气数据获取失败</span>
   </div>
 </template>
-
 <script setup>
-import { getAdcode, getWeather, getOtherWeather } from "@/api";
+import {reactive,onMounted} from "vue"
+import { getWeather, weatherCodeToText } from "@/api";
 import { Error } from "@icon-park/vue-next";
 
-// 高德开发者 Key
-const mainKey = import.meta.env.VITE_WEATHER_KEY;
-
-// 天气数据
+// 天气数据（保持原来的数据结构，模板不用改动！）
 const weatherData = reactive({
   adCode: {
-    city: null, // 城市
-    adcode: null, // 城市编码
+    city: "洛阳市",
+    adcode: null,
   },
   weather: {
-    weather: null, // 天气现象
-    temperature: null, // 实时气温
-    winddirection: null, // 风向描述
-    windpower: null, // 风力级别
+    weather: null,
+    temperature: null,
+    winddirection: "无",
+    windpower: "0",
   },
 });
-
-// 取出天气平均值
-const getTemperature = (min, max) => {
-  try {
-    // 计算平均值并四舍五入
-    const average = (Number(min) + Number(max)) / 2;
-    return Math.round(average);
-  } catch (error) {
-    console.error("计算温度出现错误：", error);
-    return "NaN";
-  }
-};
 
 // 获取天气数据
 const getWeatherData = async () => {
   try {
-    // 获取地理位置信息
-    if (!mainKey) {
-      console.log("未配置，使用备用天气接口");
-      const result = await getOtherWeather();
-      console.log(result);
-      const data = result.result;
-      weatherData.adCode = {
-        city: data.city.City || "未知地区",
-        // adcode: data.city.cityId,
-      };
-      weatherData.weather = {
-        weather: data.condition.day_weather,
-        temperature: getTemperature(data.condition.min_degree, data.condition.max_degree),
-        winddirection: data.condition.day_wind_direction,
-        windpower: data.condition.day_wind_power,
-      };
-    } else {
-      // 获取 Adcode
-      const adCode = await getAdcode(mainKey);
-      console.log(adCode);
-      if (adCode.infocode !== "10000") {
-        throw "地区查询失败";
-      }
-      weatherData.adCode = {
-        city: adCode.city,
-        adcode: adCode.adcode,
-      };
-      // 获取天气信息
-      const result = await getWeather(mainKey, weatherData.adCode.adcode);
-      weatherData.weather = {
-        weather: result.lives[0].weather,
-        temperature: result.lives[0].temperature,
-        winddirection: result.lives[0].winddirection,
-        windpower: result.lives[0].windpower,
-      };
+    const res = await getWeather();
+    if(!res){
+      throw "天气接口返回空";
     }
+    weatherData.weather = {
+      weather: weatherCodeToText(res.code),
+      temperature: res.temp,
+      winddirection: "风速",
+      windpower: res.wind,
+    };
   } catch (error) {
     console.error("天气信息获取失败:" + error);
     onError("天气信息获取失败");
@@ -108,7 +67,6 @@ const onError = (message) => {
 };
 
 onMounted(() => {
-  // 调用获取天气
   getWeatherData();
 });
 </script>
